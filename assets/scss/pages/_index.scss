@@ -1,0 +1,121 @@
+.info{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows:150vh 180vh;
+    padding:10px 10px;
+
+    @include respond-to($bp-md){
+        grid-template-columns: 50% 50%;
+        grid-template-rows:100%;
+        padding:10px 10px;
+    }
+    &__borde{
+        border: 2px solid $gray;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &__html{
+        display:flex;
+        flex-direction: column;
+        border: 1px dotted $gray;
+        margin: 20px;
+    }
+
+    &__cursos{
+        display:flex;
+        flex-direction: column;
+        justify-content: start;
+        border: 2px solid $gray;
+        margin-top: 10px;
+
+        @include respond-to($bp-md){
+            margin-left: 10px;
+            margin-top: 0;
+        }
+
+    }
+
+    &__imagen{
+        padding: 20px 20px 0px 20px;
+    }
+    &__icono{
+        display:flex;
+        align-self: center;
+        height: 230px;
+        width: 230px;
+        border: 1px solid $sable;
+        border-radius: 50%;
+        text-align: center;
+        margin: 20px 20px 0px 20px;
+    }
+
+    &--titulo{
+        display:flex;
+        font-family: $secondary-font;
+        font-size: $font-size-large;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    &--curso{
+        font-family: $secondary-font;
+        font-size: $font-size-large;
+        display:flex;
+        align-self: center;
+        justify-content: center;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    &--texto{
+        display:flex;
+        padding: 0px 20px;
+        font-size: $font-size-small;
+        letter-spacing: 1px;
+        line-height: 20px;
+        margin: 0;
+        text-align: justify;
+    }
+    &--autor{
+        display:flex;
+        padding: 10px 20px;
+        font-size: $font-size-medium;
+        margin: 0;
+    }
+
+    &__mas{
+        text-align: center;
+        background-color: $gray;
+        color: $white;
+        margin: 10px 20px;
+    }
+}
+
+.fa, .far, .fas , .fab{
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.animation{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+
+    @include respond-to($bp-md){
+        height: 150px;
+        
+    }
+
+    &__arrow{
+        position: relative;
+        animation: mover 3s linear infinite; 
+    }
+    &__tuerca{
+        animation: girar 5s linear infinite;
+        transform-origin: 80% 80%;
+    }
+    
+}
+

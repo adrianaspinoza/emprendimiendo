@@ -1,0 +1,298 @@
+/*
+Para compilar el manifiesto desde la raiz de tu proyecto, abre el terminal 
+verifica que este en la raiz de tu proyecto con el comando 'ls' deberias ver
+assets index.html 
+->luego de verificar, colocaremos el comando 
+sass --watch assets/scss/main.scss:assets/css/style.css 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(130px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes girar {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.button {
+  border: none;
+  color: #000;
+  background-color: #FFAF6D;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 0 15px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #FFF;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-template-rows: 50px;
+  background-color: #000;
+}
+.navbar__brand, .navbar__menu, .navbar__hamburger, .navbar__item {
+  display: flex;
+  align-items: center;
+}
+.navbar__menu {
+  justify-content: flex-end;
+}
+.navbar__hamburger {
+  color: #FFF;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 40px;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .navbar__hamburger {
+    display: none;
+  }
+}
+.navbar__hamburger:hover {
+  color: #FFA500;
+}
+.navbar__imagen {
+  height: 40px;
+  width: auto;
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .navbar__imagen {
+    height: 60px;
+  }
+}
+.navbar__item {
+  color: #FFF;
+  cursor: pointer;
+  display: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 20px;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .navbar__item {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    grid-template-columns: 80px auto;
+    grid-template-rows: 80px;
+  }
+}
+
+.header {
+  background-image: url("../img/desarrolloweb2021t.svg");
+  height: 200px;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .header {
+    background-position: center;
+    height: 400px;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: #000;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+  }
+}
+.footer__texto {
+  color: #FFF;
+}
+.footer__menu {
+  text-align: center;
+  padding-top: 5px;
+}
+@media (min-width: 768px) {
+  .footer__menu {
+    text-align: right;
+  }
+}
+.footer__text {
+  color: #FFF;
+  padding-right: 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  .footer__text {
+    display: inline-block;
+    padding-top: 0pxs;
+  }
+}
+.footer__email {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .footer__email {
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 0px;
+  }
+}
+.footer__input {
+  height: 30px;
+  border-radius: 5px;
+}
+.footer__input:hover {
+  background-color: #FFAF6D;
+}
+.footer__input:focus {
+  background-color: #FFA500;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 150vh 180vh;
+  padding: 10px 10px;
+}
+@media (min-width: 768px) {
+  .info {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    padding: 10px 10px;
+  }
+}
+.info__borde {
+  border: 2px solid #9c9c9c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info__html {
+  display: flex;
+  flex-direction: column;
+  border: 1px dotted #9c9c9c;
+  margin: 20px;
+}
+.info__cursos {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 2px solid #9c9c9c;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .info__cursos {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+}
+.info__imagen {
+  padding: 20px 20px 0px 20px;
+}
+.info__icono {
+  display: flex;
+  align-self: center;
+  height: 230px;
+  width: 230px;
+  border: 1px solid #060606;
+  border-radius: 50%;
+  text-align: center;
+  margin: 20px 20px 0px 20px;
+}
+.info--titulo {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  margin: 0;
+}
+.info--curso {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.info--texto {
+  display: flex;
+  padding: 0px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin: 0;
+  text-align: justify;
+}
+.info--autor {
+  display: flex;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0;
+}
+.info__mas {
+  text-align: center;
+  background-color: #9c9c9c;
+  color: #FFF;
+  margin: 10px 20px;
+}
+
+.fa, .far, .fas, .fab {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.animation {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .animation {
+    height: 150px;
+  }
+}
+.animation__arrow {
+  position: relative;
+  animation: mover 3s linear infinite;
+}
+.animation__tuerca {
+  animation: girar 5s linear infinite;
+  transform-origin: 80% 80%;
+}
+
+/*# sourceMappingURL=style.css.map */

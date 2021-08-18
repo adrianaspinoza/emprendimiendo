@@ -1,0 +1,64 @@
+.navbar{
+    display:grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: 50px;
+    background-color: $black;
+
+    &__brand,
+    &__menu,
+    &__hamburger,
+    &__item{
+        display:flex;
+        align-items: center;
+    }
+
+    &__menu{
+        justify-content: flex-end;
+    }
+
+    &__hamburger{
+        color:$white;
+        cursor:pointer;
+        font-size: $font-size-large;
+        font-weight: 700;
+        padding:0 40px;
+        text-decoration: none;
+
+        @include respond-to($bp-md){
+            display:none;
+        }
+    }
+
+    &__hamburger:hover{
+        color: $orange;
+    }
+
+    &__imagen{
+        height: 40px;
+        width: auto;
+        padding-left: 10px;
+        @include respond-to($bp-md){
+            height: 60px;
+        }
+    }
+
+    &__item{
+        color: $white;
+        cursor:pointer;
+        display: none;
+        font-size:$font-size-medium;
+        font-weight: 700;
+        padding: 0 20px;
+        text-decoration: none;
+
+        @include respond-to($bp-md){
+            display:flex;
+        }
+    }
+
+    @include respond-to($bp-md){
+        grid-template-columns: 80px auto;
+        grid-template-rows: 80px;
+    }
+    
+}

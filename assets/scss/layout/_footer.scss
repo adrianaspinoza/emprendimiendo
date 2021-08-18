@@ -1,0 +1,63 @@
+.footer{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: $black;
+    align-items: center;
+    text-align: center;
+
+    @include respond-to($bp-md){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px;
+    }
+    
+    &__texto{
+        color: $white;
+    }
+    &__menu{
+        text-align: center;
+        padding-top: 5px;
+
+        @include respond-to($bp-md){
+            text-align: right;
+            
+        }
+    }
+    &__text{
+        color: $white;
+        padding-right: 30px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+
+        @include respond-to($bp-md){
+            display: inline-block;
+            padding-top: 0pxs;
+            
+        }
+    }
+
+    &__email{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @include respond-to($bp-md){
+            text-align: left;
+            padding-top: 15px;
+            padding-bottom: 0px;
+        }
+    }
+    &__input{
+        height: 30px;
+        border-radius: 5px;
+    }
+        &__input:hover{
+            background-color: $tangerine;
+        }
+        &__input:focus{
+            background-color: $orange;
+        }
+
+}

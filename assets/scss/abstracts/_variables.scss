@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+// colors setup
+$white: #FFF;
+$black: #000;
+$sable: #060606;
+$gray: #9c9c9c;
+$charcoal: #2E1503;
+$tangerine: #FFAF6D;
+$orange: #FFA500;
+
+//tipografia setup
+$ubuntu: 'Ubuntu', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$ubuntu-regular: 400;
+$ubuntu-bold: 700;
+$poppins-regular: 400;
+$poppins-bold: 700;
+
+$primary-font: $ubuntu;
+$secondary-font: $poppins;
+
+//fontsize setup
+$font-size-xxxx-large: 45px;
+$font-size-xxx-large: 40px;
+$font-size-xx-large: 35px;
+$font-size-x-large: 30px;
+$font-size-large: 20px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+$font-size-x-small: 12px;
+
+//breakpoint setup
+$bp-sm:576px;
+$bp-md:768px;
+$bp-lg:992px;
+$bp-xl:1200px;
